@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web_calc</title>
+    <!-- ? FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ? FONT-->
     <link
       rel="stylesheet"
       href="src/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
@@ -14,7 +22,245 @@
     />
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
-  <body class="">
+  <body class="vh-100">
+    <div
+      class="actual h-100 d-flex flex-column justify-content-between align-items-center"
+    >
+      <header class="bg-black text-white w-100 text-center fs-3 "><span class="fa-fade">Web Calculator</span></header>
+      <main class="h-75 w-25 border border-2 border-black">
+        <div
+          class="toolbar bg-black text-white d-flex justify-content-between align-items-center container-fluid p-1"
+        >
+          <div class="tb-left">
+            <span class="theme">
+              <i class="fa-solid fa-circle-half-stroke"></i
+            ></span>
+            <span class="background"> <i class="fa-regular fa-image"></i></span>
+          </div>
+          <div class="tb-right">
+            <span class="minimize"><i class="fa-solid fa-minus"></i></span>
+            <span class="restore"
+              ><i class="fa-regular fa-window-restore"></i
+            ></span>
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+          </div>
+        </div>
+        <div
+          class="result bg-white text-black border border-1 border-black d-flex flex-column align-items-end"
+        >
+          <div class="pre-calc fs-6 h-25 mt-1">123</div>
+          <div class="post-calc fs-3 h-75 mt-2 fw-bold">0</div>
+        </div>
+        <div
+          class="keys container-fluid w-100 bg-warning border-1 border-black text-center d-flex flex-column justify-content-between"
+        >
+          <div class="row h-100 g-0 w-100">
+            <div class="col-5">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>CE</span>
+              </button>
+            </div>
+            <div class="col-5">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>C</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-delete-left"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="row h-100 g-0 w-100">
+            <div class="col-3">
+              <button
+                class="btn btn-outline-light w-100 h-100 rounded-0 p-1 border fx"
+              >
+                <span><i class="fa-solid fa-calculator"></i></span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-square-root-variable"></i></span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-superscript"></i></span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-percent"></i></span>
+              </button>
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span> <i class="fa-solid fa-divide"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="row h-100 g-0 w-100">
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span> M</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>7</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>8</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>9</span>
+              </button>
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-xmark"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="row h-100 g-0 w-100">
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>MS</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>4</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>5</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>6</span>
+              </button>
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-minus"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="row h-100 g-0 w-100"> 
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>MR</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border "
+              >
+                <span>1</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border "
+              >
+                <span>2</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>3</span>
+              </button>
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span><i class="fa-solid fa-plus"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="row h-100 g-0 w-100">
+            <div class="col-3">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>MC</span>
+              </button>
+            </div>
+           
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>.</span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button
+                class="btn btn-secondary w-100 h-100 rounded-0 p-1 border"
+              >
+                <span>0</span>
+              </button>
+            </div>
+            <div class="col-5 ">
+              <button
+                class="btn btn-outline-light w-100 h-100 rounded-0 p-1 border equal"
+              >
+                <span><i class="fa-solid fa-equals"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-black text-white w-100 text-center fs-3"><span><i class="fa-brands fa-github fa-beat-fade"></i></span></footer>
+    </div>
+    <div class="BG"></div>
     <script src="assets/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
